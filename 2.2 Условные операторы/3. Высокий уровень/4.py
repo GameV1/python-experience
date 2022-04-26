@@ -4,7 +4,7 @@
 
 
 def norm(num: int):
-    num = str(num)
+    num = str(num)[-1:]
     if num == "1":
         return "копейка"
     elif num in ["2", "3", "4"]:
