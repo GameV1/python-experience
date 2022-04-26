@@ -1,20 +1,33 @@
-import math
+# import math
 
 
-def reduce_fraction(n, m):
-    k = math.gcd(n, m)
-    return n//k, m//k
+# def reduce_fraction(n, m):
+#     k = math.gcd(n, m)
+#     return n//k, m//k
 
 
-def angle_to_pi(angle: int):
-    return reduce_fraction(angle, 180)
+# def angle_to_pi(angle: int):
+#     return reduce_fraction(angle, 180)
 
 
-angle = int(input("Введите угол:"))
-a, b = angle_to_pi(angle)
+# angle = int(input("Введите угол:"))
+# a, b = angle_to_pi(angle)
 
-up = (str(a) if a > 1 else "") + "π"
-down = str(b)
-middle = "-"*max(len(up), len(down))
+# up = (str(a) if a > 1 else "") + "π"
+# down = str(b)
+# middle = "-"*max(len(up), len(down))
 
-print(f"{up}\n{middle}\n{down}")
+# print(f"{up}\n{middle}\n{down}")
+
+from math import sin
+
+
+y = int(input("Введите y: "))
+x = int(input("Введите x: "))
+a = int(input("Введите a: "))
+c = int(input("Введите c: "))
+
+P = ((a ** 3) + (sin(y-c) ** 4)) / \
+    ((sin(x + y) ** 3) + abs(x - y))
+
+print(P)
