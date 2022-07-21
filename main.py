@@ -1,33 +1,43 @@
-# import math
+# 1.1 (1)
+t = float(input("t:"))
+R = 3*t**2 + 3*t**5 + 4.9
+print(R)
 
 
-# def reduce_fraction(n, m):
-#     k = math.gcd(n, m)
-#     return n//k, m//k
+# 1.1 (2)
+import math
+p = float(input("p:"))
+y = float(input("y:"))
+e = float(input("e:"))
+K = math.log(p**2 + y**2, math.e)
+print(K)
 
 
-# def angle_to_pi(angle: int):
-#     return reduce_fraction(angle, 180)
+# 1.2 (1)
+Z = 236547852
+print(Z, "байт")
+Z = Z / 1024
+print(Z, "Kбайт")
+Z = Z / 1024
+print(Z, "Mбайт")
+Z = Z / 1024
+print(Z, "Gбайт")
+Z = Z / 1024
+print(Z, "Tбайт")
 
 
-# angle = int(input("Введите угол:"))
-# a, b = angle_to_pi(angle)
-
-# up = (str(a) if a > 1 else "") + "π"
-# down = str(b)
-# middle = "-"*max(len(up), len(down))
-
-# print(f"{up}\n{middle}\n{down}")
-
-from math import sin
+# 1.2 (1)
+t = float(input("t: "))
+S = t**3 - 3*t**2 + 2
+print(S)
 
 
-y = int(input("Введите y: "))
-x = int(input("Введите x: "))
-a = int(input("Введите a: "))
-c = int(input("Введите c: "))
+# 2.1 (1)
+A = 2
+B = 6
+C = 4
 
-P = ((a ** 3) + (sin(y-c) ** 4)) / \
-    ((sin(x + y) ** 3) + abs(x - y))
-
-print(P)
+a = (A%2 == 0 and B%2 != 0) or (A%2 != 0 and B%2 == 0)
+b = A%3 == 0 and B%3 == 0 and C%3 == 0
+print(a)
+print(b)
